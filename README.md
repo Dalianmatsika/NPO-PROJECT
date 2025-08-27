@@ -1,38 +1,30 @@
-My Website Project:
+My Website Project:Helping Hand
 
 Student Information
-Student Name: 
-Student Number: 
+Student Name:Dalian Matsika
+Student Number:ST10492347
 GitHub Repository: 
 
 Project Overview:
-This project is about creating a professional website. It will show my skills in web design and development. The project has three parts-first building the basic HTML structure then adding CSS styling and finally adding JavaScript functionality. By the end the website will work on all devices and be easy for search engines to find.
+The Helping Hand Community Centre Website project is an initiative to create a new, modern, and user-friendly static website. Its primary goal is to serve the organization's three key audiences—community members, volunteers, and donors—by providing a central, accessible hub for all information. The project focuses on a simple, front-end-only design to ensure the site is fast, secure, cost-effective, and easy to maintain, with success being measured by increased donations, volunteer sign-ups, and program participation.
 
 Website Goals and Objectives:
-
 Goal: To build a professional, working website.
 Purpose: To show my skills in web development.
 Features: The website will be responsive (works on all devices), easy to use, and SEO-friendly.
 
 Key Features and Functionality:
-
-Responsive Design: The website will look good on computers, tablets, and phones.
-Easy Navigation: Users can easily move between pages.
-Organized Content: Content is sorted into different pages like About Us, Products, and a Contact form.
-Interactive Parts: The final website will have JavaScript to make it more interactive.
-Search Engine Friendly: The website will be built so that search engines can easily find and understand it.
+The new Helping Hand website will be a user-friendly, static site featuring essential pages like a Homepage, About Us, Programs, Events, Volunteer, Donate, Blog, and Contact. Its key functionalities include mobile responsiveness, secure external donation links, easy-to-use forms, and SEO optimization to achieve the project's goals of increasing donations, volunteer sign-ups, and program awareness.
 
 Project Timeline and Milestones:
-
-Start Date: 11 August 2025
+Start Date: 12 August 2025
 Submission Date: 27 August 2025
 
 Milestone & Due Date:
-
 Project Planning - 13 August 2025
 Content Gathering - 15 August 2025
-HTML Structure & File Setup - 18 August 2025
-Basic Content & Navigation - 20 August 2025
+HTML Structure & File Setup - 19 August 2025
+Basic Content & Navigation - 21 August 2025
 Testing & Debugging - 24 August 2025
 Final Review & Submission - 27 August 2025
 
@@ -53,14 +45,14 @@ The website is being tested on different browsers.
 Comments are included in the code to explain what it does.
 
 Sitemap:
-Home (index.html)
-About Us (about.html)
-Products (product.html)
-Inspiration Section (inspiration section.html)
-Membership Portal (membership portal.html)
-Contact (contact.html)
-Cart (cart.html)
-Payment (payment.html)
+Homepage
+About
+Our Programs
+Events
+Volunteer
+Donate
+Blogs/News
+Contact
 
 Changelog:
 [11 August 2025]: Project started.
@@ -68,9 +60,7 @@ Changelog:
 [18 August 2025]: Created the main file structure and all basic HTML files.
 [20 August 2025]: Added navigation and placeholder content.
 [24 August 2025]: Began testing and fixing code.
-[25 August 2025]: Added a new page for the shopping cart and updated the navigation links.
-[25 August 2025]: Created a new payment page and linked the checkout button to it.
-[25 August 2025]: Added a fake payment form to the payment page.
+[25 August 2025]: Added new pages for the Volunteers and Donation and updated the navigation links.
 
 References:
 All references for this part of the project are included in the Website Project Proposal document and this README.md file. They are cited using the correct referencing style.
