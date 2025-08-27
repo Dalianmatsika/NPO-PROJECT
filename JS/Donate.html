@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - The Giving Tree Community Centre</title>
+    <link rel="stylesheet" href="c:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\NPO-PROJECT\style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">The Giving Tree</a>
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home Page</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="blog.html">Blog/News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="donate.html" class="btn">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container donate-content">
+                <h1 class="section-title">Make a Donation</h1>
+                <p>Your support helps us continue our mission. Every donation, no matter the size, makes a meaningful impact on our programs and the people we serve.</p>
+                
+                <form action="/process-donation" method="post" class="donation-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Donation Amount (R):</label>
+                        <input type="number" id="amount" name="amount" min="1" step="0.01" required>
+                    </div>
+                    
+                    <button type="submit" class="btn">Donate Now</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Giving Tree Community Centre. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
