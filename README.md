@@ -3,7 +3,7 @@ My Website Project:Helping Hand
 Student Information
 Student Name:Dalian Matsika
 Student Number:ST10492347
-GitHub Repository: 
+GitHub Repository: https://github.com/Dalianmatsika/NPO-PROJECT.git
 
 Project Overview:
 The Helping Hand Community Centre Website project is an initiative to create a new, modern, and user-friendly static website. Its primary goal is to serve the organization's three key audiences—community members, volunteers, and donors—by providing a central, accessible hub for all information. The project focuses on a simple, front-end-only design to ensure the site is fast, secure, cost-effective, and easy to maintain, with success being measured by increased donations, volunteer sign-ups, and program participation.
