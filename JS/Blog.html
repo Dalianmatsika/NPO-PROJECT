@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - The Helping Hand Community</title>
-    <title>Blog/News - </title>
-    <link rel="stylesheet" href="Css\style.css">
+    <title>Blog/News - The Helping Hand Community</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">The Helping Hand Community</a>
-            <nav>
-                <ul>
-                    <li><a href="Homepage.html">Home Page</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="blog.html">Blog/News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="cta-buttons">
-                <a href="donate.html" class="btn">Donate</a>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <h1 class="section-title">Latest News & Stories</h1>
-                <div class="blog-grid">
-                    <div class="blog-post-card">
-                        <img src="c:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\NPO-PROJECT\Images\team-portrait-proud-business-people-office-partnership-collaboration-support-face-diversity-group-women-with-man-leadership-teamwork-professional-startup-mission_5904.avif" alt="Volunteers organizing food.">
-                        <div class="blog-post-content">
-                            <h3>Local Business Partnership Fuels Food Bank Success</h3>
-                            <p>Thanks to a generous partnership with 'Fresh Mart,' our food bank received a record-breaking donation this month...</p>
+    <main class="flex-grow">
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Latest News & Stories</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/800x600/4CAF50/FFFFFF?text=Volunteers+Organizing+Food" alt="Volunteers organizing food." class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Local Business Partnership Fuels Food Bank Success</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Thanks to a generous partnership with 'Fresh Mart,' our food bank received a record-breaking donation this month...</p>
+                            <a href="#" class="inline-block font-medium text-green-600 hover:underline">Read More</a>
                         </div>
                     </div>
-                    <div class="blog-post-card">
-                        <img src="c:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\NPO-PROJECT\Images\smiling-student-studying.jpg" alt="Student smiling while studying.">
-                        <div class="blog-post-content">
-                            <h3>Student Spotlight: How our Tutoring Program Changed One Life</h3>
-                            <p>Meet Sarah, a recent graduate who credits her success to the support she received from our dedicated tutors...</p>
+                    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/800x600/4CAF50/FFFFFF?text=Student+in+Tutoring+Session" alt="Student smiling while studying." class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Student Spotlight: How our Tutoring Program Changed One Life</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Meet Sarah, a recent graduate who credits her success to the support she received from our dedicated tutors...</p>
+                            <a href="#" class="inline-block font-medium text-green-600 hover:underline">Read More</a>
                         </div>
                     </div>
-                    <div class="blog-post-card">
-                        <img src="c:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\NPO-PROJECT\Images\community-members-celebrating_2.jpg" alt="Community members celebrating.">
-                        <div class="blog-post-content">
-                            <h3>Summer Festival a Huge Success!</h3>
-                            <p>Our annual summer festival brought together hundreds of community members for a day of fun, food, and connection...</p>
+                    <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/800x600/4CAF50/FFFFFF?text=Community+Members+Celebrating" alt="Community members celebrating." class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Summer Festival a Huge Success!</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Our annual summer festival brought together hundreds of community members for a day of fun, food, and connection...</p>
+                            <a href="#" class="inline-block font-medium text-green-600 hover:underline">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -61,11 +72,5 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">

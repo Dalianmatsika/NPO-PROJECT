@@ -4,61 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - The Helping Hand Community</title>
-    <link rel="stylesheet" href="Css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">The Helping Hand Community</a>
-            <nav>
-                <ul>
-                    <li><a href="Homepage.html">Home Page</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="blog.html">Blog/News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="cta-buttons">
-                <a href="donate.html" class="btn">Donate</a>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <h1 class="section-title">Upcoming Events</h1>
-                <ul class="event-list">
-                    <li class="event-item">
-                        <h4>Community Food Drive</h4>
-                        <p><span>Date:</span> September 15, 2025</p>
-                        <p><span>Time:</span> 10:00 AM - 2:00 PM</p>
-                        <p>Join us in collecting non-perishable food items to stock our food bank for the winter season.</p>
+    <main class="flex-grow">
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Upcoming Events</h1>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-8">Join us at our next event! Your participation helps us make a difference.</p>
+                <div class="text-center mb-8">
+                    <img src="https://placehold.co/800x600/4CAF50/FFFFFF?text=Community+Event" alt="A photo of people gathering at a community event." class="w-full max-w-4xl mx-auto h-auto rounded-xl shadow-lg">
+                </div>
+                <ul class="list-none flex flex-col gap-6">
+                    <li class="bg-gray-100 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <h4 class="text-xl font-bold mb-2 text-gray-900">Community Food Drive</h4>
+                        <p class="text-gray-600 mb-1">
+                            <span class="font-medium text-gray-900">Date:</span> September 15, 2025
+                        </p>
+                        <p class="text-gray-600 mb-1">
+                            <span class="font-medium text-gray-900">Time:</span> 10:00 AM - 2:00 PM
+                        </p>
+                        <p class="text-gray-600">Join us in collecting non-perishable food items to stock our food bank for the winter season.</p>
                     </li>
-                    <li class="event-item">
-                        <h4>Volunteer Orientation Session</h4>
-                        <p><span>Date:</span> October 5, 2025</p>
-                        <p><span>Time:</span> 6:00 PM</p>
-                        <p>A mandatory session for all new volunteers to learn about our mission and different volunteer roles.</p>
+                    <li class="bg-gray-100 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <h4 class="text-xl font-bold mb-2 text-gray-900">Volunteer Orientation Session</h4>
+                        <p class="text-gray-600 mb-1">
+                            <span class="font-medium text-gray-900">Date:</span> October 5, 2025
+                        </p>
+                        <p class="text-gray-600 mb-1">
+                            <span class="font-medium text-gray-900">Time:</span> 6:00 PM
+                        </p>
+                        <p class="text-gray-600">A mandatory session for all new volunteers to learn about our mission and different volunteer roles.</p>
                     </li>
-                    <li class="event-item">
-                        <h4>Annual Fundraising Gala</h4>
-                        <p><span>Date:</span> November 20, 2025</p>
-                        <p><span>Time:</span> 7:00 PM</p>
-                        <p>An evening of celebration and fundraising to support our ongoing community programs. Tickets available soon.</p>
+                    <li class="bg-gray-100 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <h4 class="text-xl font-bold mb-2 text-gray-900">Annual Fundraising Gala</h4>
+                        <p class="text-gray-600 mb-1">
+                            <span class="font-medium text-gray-900">Date:</span> November 20, 2025
+                        </p>
+                        <p class="text-gray-600 mb-1">
+                            <span class="font-medium text-gray-900">Time:</span> 7:00 PM
+                        </p>
+                        <p class="text-gray-600">An evening of celebration and fundraising to support our ongoing community programs. Tickets available soon.</p>
                     </li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
+    <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
+        <div class="container mx-auto px-4">
             <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
         </div>
     </footer>

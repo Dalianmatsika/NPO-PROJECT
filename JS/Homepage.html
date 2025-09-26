@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Helping Hand Community</title>
-    <link rel="stylesheet" href="Css\style.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* REQUIRED FOR NEW HEADER STYLE: Custom Fonts */
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,10 +38,21 @@
         </div>
     </header>
 
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold font-merriweather **text-center**">Welcome to The Helping Hand Community</h1>
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="list-none flex p-0 m-0">
+                    <li aria-current="page" class="font-medium">
+                        Home
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Nurturing a Thriving and Connected Community</h1>
+                <h2>Nurturing a Thriving and Connected Community</h2>
                 <p>Providing accessible resources, fostering personal growth, and creating a supportive environment for all.</p>
                 <div class="hero-buttons">
                     <a href="donate.html" class="btn donate">Make a Donation</a>
