@@ -71,7 +71,7 @@ This repository contains the code for "The Helping Hand Community's" multi-page 
 Student Information
 Student Name:Dalian Matsika
 Student Number:ST10492347
-GitHub Repository:
+GitHub Repository:https://github.com/Dalianmatsika/NPO-PROJECT.git
 
 # Project Overview:
 Multi-Page Structure: The website is organized into multiple HTML files (Homepage.html, about.html, programs.html, events.html, volunteer.html, donate.html, blog.html, and contact.html).
