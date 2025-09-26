@@ -3,58 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - The Helping Hand Community</title>
-    <link rel="stylesheet" href="style.css">
-<body>
+    <title>Our Programs - The Helping Hand Community</title>
+    <link href="Style.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">The Helping Hand Community</a>
-            <nav>
-                <ul>
-                    <li><a href="Homepage.html">Home Page</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="blog.html">Blog/News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="cta-buttons">
-                <a href="donate.html" class="btn">Donate</a>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            </div>
+        </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="section">
-            <div class="container about-content">
-                <h1 class="section-title">About The Helping Hand Community</h1>
-                <p class="page-intro">Founded in 2010, The Helping Hand Community Centre has been a cornerstone of support for our local residents. What started as a small, volunteer-run food bank has grown into a multi-faceted non-profit organization dedicated to fostering a more connected and thriving community.</p>
+        <section>
+            <div>
+                <h1>About The Helping Hand Community</h1>
+                <p>Founded in 2010, The Helping Hand Community Centre has been a cornerstone of support for our local residents. What started as a small, volunteer-run food bank has grown into a multi-faceted non-profit organization dedicated to fostering a more connected and thriving community.</p>
 
-                <img src="C:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\Images\Community centre.png" alt="A photo of our community center."/>
+                <img src="Images/Community centre.png" alt="Our community center."/>
 
                 <h2>Our Mission</h2>
                 <p>Our mission is to provide accessible resources, foster personal growth, and create a supportive environment for all. We believe that a strong community is built on compassion, mutual support, and the empowerment of every individual. Our programs are designed to meet the immediate needs of our neighbors while also providing the tools they need to build a better future for themselves and their families.</p>
 
                 <h2>Meet Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="C:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\Images\Lauren.jpg" alt="Mary Lauren, Executive Director."/>
+                <div>
+                    <div>
+                        <img src="Images/Lauren.jpg" alt="Jane Doe, Executive Director."/>
                         <h4>Jane Doe</h4>
-                        <span class="role">Executive Director</span>
+                        <span>Executive Director</span>
                     </div>
-                    <div class="team-member">
-                        <img src="C:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\Images\Joseph.jpg" alt="Joseph Duke, Program Coordinator."/>
+                    <div>
+                        <img src="Images/Joseph.jpg" alt="John Smith, Program Coordinator."/>
                         <h4>John Smith</h4>
-                        <span class="role">Program Coordinator</span>
+                        <span>Program Coordinator</span>
                     </div>
-                    <div class="team-member">
-                        <img src="C:\Users\RC_Student_lab\Documents\GitHub\NPO-PROJECT\Images\Maria.jpg" alt="Maria Jose, Volunteer Manager."/>
+                    <div>
+                        <img src="Images/Maria.jpg" alt="Maria Garcia, Volunteer Manager."/>
                         <h4>Maria Garcia</h4>
-                        <span class="role">Volunteer Manager</span>
+                        <span>Volunteer Manager</span>
                     </div>
                 </div>
             </div>
@@ -62,7 +75,7 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div>
             <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
         </div>
     </footer>

@@ -6,44 +6,52 @@
     <title>The Helping Hand Community</title>
     <link rel="stylesheet" href="style.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="Style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* REQUIRED FOR NEW HEADER STYLE: Custom Fonts */
+        /* Custom styles to ensure the look matches the rest of the site */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
         h1, h2, h3, h4 {
             font-family: 'Merriweather', serif;
         }
     </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">The Helping Hand Community</a>
-            <nav>
-                <ul>
-                    <li><a href="Homepage.html">Home Page</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="blog.html">Blog/News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-gray-900 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="cta-buttons">
-                <a href="donate.html" class="btn">Donate</a>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
             </div>
         </div>
     </header>
 
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-3xl font-bold font-merriweather **text-center**">Welcome to The Helping Hand Community</h1>
+            <h1 class="text-3xl font-bold font-merriweather text-center">The Helping Hand Community</h1>
             <nav class="text-sm" aria-label="Breadcrumb">
                 <ol class="list-none flex p-0 m-0">
+                    <li class="flex items-center">
+                        <a href="Homepage.html" class="text-white hover:text-green-200 transition-colors"></a>
+                        <span class="mx-2 opacity-75"></span>
+                    </li>
                     <li aria-current="page" class="font-medium">
-                        Home
                     </li>
                 </ol>
             </nav>
