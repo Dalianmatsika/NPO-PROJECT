@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make an Enquiry | Services, Volunteering, Sponsorship - The Helping Hand</title>
+    <meta name="description" content="Use our dedicated enquiry form to ask about our community services, available volunteer positions, or corporate sponsorship opportunities.">
+    
+    <link href="Style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+        /* Style for hidden dynamic content/errors */
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
+
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h1 class="text-center mb-4 text-4xl font-bold text-green-600">Make an Enquiry</h1>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-10 text-gray-600">Fill out the form below and we will get back to you with cost, availability, or relevant information.</p>
+                
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl border border-gray-100">
+                    
+                    <form class="space-y-6" action="https://formspree.io/f/xnnlyrbq" method="POST">
+                        
+                        <div>
+                            <label for="name" class="block font-medium mb-1">Your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                            <span id="nameError" class="text-red-600 text-sm hidden"></span>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block font-medium mb-1">Your Email:</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                            <span id="emailError" class="text-red-600 text-sm hidden"></span>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block font-medium mb-1">Phone Number (Optional):</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                            <span id="phoneError" class="text-red-600 text-sm hidden"></span>
+                        </div>
+                        
+                        <div>
+                            <label for="type" class="block font-medium mb-1">Type of Enquiry:</label>
+                            <select id="type" name="type" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white">
+                                <option value="">-- Select One --</option>
+                                <option value="Service: Tutoring">Service: After-School Tutoring</option>
+                                <option value="Service: Job Assistance">Service: Job Placement Assistance</option>
+                                <option value="Service: Mental Health">Service: Mental Health Support</option>
+                                <option value="Volunteer">I want to Volunteer</option>
+                                <option value="Sponsor">I want to discuss Sponsorship</option>
+                            </select>
+                            <span id="typeError" class="text-red-600 text-sm hidden"></span>
+                        </div>
+
+                        <div>
+                            <label for="details" class="block font-medium mb-1">Details / Specific Question:</label>
+                            <textarea id="details" name="details" rows="5" placeholder="Tell us more about what you need or what you are interested in." required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                            <span id="detailsError" class="text-red-600 text-sm hidden"></span>
+                        </div>
+                        
+                        <button type="submit" id="enquirySubmit" class="w-full px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Submit Enquiry</button>
+                    </form>
+                    
+                    <div id="responseMessage" class="hidden mt-8 p-6 rounded-lg bg-green-100 border-l-4 border-green-500">
+                        <h3 class="text-xl font-bold text-green-800 mb-2 text-left">Thank You!</h3>
+                        <p id="responseDetails" class="text-green-700 text-base"></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function validateEnquiryForm(event) {
+            event.preventDefault(); // Stop default form submission
+            let isValid = true;
+            const form = document.getElementById('enquiryForm');
+            
+            // Helper function to show/hide error messages
+            const displayError = (id, message) => {
+                const errorElement = document.getElementById(id + 'Error');
+                errorElement.textContent = message;
+                if (message) {
+                    errorElement.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    errorElement.classList.add('hidden');
+                }
+            };
+
+            // 1. Name Validation (Min 3 characters)
+            const name = form.name.value.trim();
+            if (name.length < 3) {
+                displayError('name', 'Name must be at least 3 characters.');
+            } else { displayError('name', ''); }
+
+            // 2. Email Validation (Basic Regex)
+            const email = form.email.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                displayError('email', 'Please enter a valid email address.');
+            } else { displayError('email', ''); }
+            
+            // 3. Phone Validation (Optional, but if filled, must be 10 digits/pattern)
+            const phone = form.phone.value.trim();
+            const phoneRegex = /^[\d\s\-\(\)]+$/; // Allows numbers, spaces, hyphens, parentheses
+            if (phone && !phoneRegex.test(phone)) {
+                displayError('phone', 'Please enter a valid phone number format.');
+            } else { displayError('phone', ''); }
+
+            // 4. Enquiry Type Validation
+            const type = form.type.value;
+            if (type === "") {
+                displayError('type', 'Please select a type of enquiry.');
+            } else { displayError('type', ''); }
+
+            // 5. Details Validation (Min 20 characters)
+            const details = form.details.value.trim();
+            if (details.length < 20) {
+                displayError('details', 'Please provide a detailed message (min 20 characters).');
+            } else { displayError('details', ''); }
+            
+            // If validation is successful, simulate AJAX submission and show response
+            if (isValid) {
+                form.classList.add('hidden'); // Hide the form
+                const responseDiv = document.getElementById('responseMessage');
+                const responseP = document.getElementById('responseDetails');
+                
+                // Dynamic Response logic based on enquiry type (4.1)
+                let message = `Thank you, ${name}! Your enquiry about **${type}** has been received.`;
+
+                if (type.startsWith('Service')) {
+                    message += " We will check the availability and cost of our specific program offerings and reply to your email within 24 hours.";
+                } else if (type === 'Volunteer') {
+                    message += " We appreciate your interest in volunteering! We will send you a link to our detailed orientation schedule and application form shortly.";
+                } else if (type === 'Sponsor') {
+                    message += " A member of our Executive Team will review your request and contact you directly to discuss partnership opportunities within 48 hours.";
+                } else {
+                    message += " A staff member will respond to your general enquiry shortly.";
+                }
+
+                responseP.innerHTML = message;
+                responseDiv.classList.remove('hidden'); // Show the response
+            }
+
+            return false; // Prevent traditional form submission
+        }
+    </script>
+</body>
+</html>

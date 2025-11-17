@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission, Vision & Team | About The Helping Hand Community</title>
+    <meta name="description" content="Learn about The Helping Hand Community's mission to support local families in Cape Town. Meet our dedicated team and view our vision for the future.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="Style.css" rel="stylesheet">
+    <style>
+        /* CSS styles remain consistent */
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --dark-color: #333333;
+            --medium-gray: #f4f4f4;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        body { font-family: 'Roboto', sans-serif; font-size: 18px; }
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; color: var(--primary-color); text-align: center; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
+
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-green-600 transition-colors border-b-2 border-green-600">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="py-16">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Our Story and Team</h1>
+
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Mission & Vision</h2>
+                    <div class="space-y-6 text-gray-700 text-lg">
+                        <p class="text-center">**Mission:** To empower the local community by providing free access to essential services in education, employment, and mental health support, fostering resilience and independence.</p>
+                        <p class="text-center">**Vision:** To build a self-sustaining community where every individual has the opportunity to thrive, free from the barriers of poverty and limited resources.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Meet Our Dedicated Team</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+                    
+                    <div class="team-member-css p-4 bg-white rounded-lg shadow-md">
+                        <img src="Images/Jane_Doe.jpg" alt="Jane Doe, Executive Director of The Helping Hand Community." class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-green-600"/>
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Jane Doe</h4>
+                        <span class="text-green-600 font-medium">Executive Director</span>
+                    </div>
+                    
+                    <div class="team-member-css p-4 bg-white rounded-lg shadow-md">
+                        <img src="Images/John_Smith.jpg" alt="John Smith, Program Coordinator for educational services." class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-green-600"/>
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">John Smith</h4>
+                        <span class="text-green-600 font-medium">Program Coordinator</span>
+                    </div>
+
+                    <div class="team-member-css p-4 bg-white rounded-lg shadow-md">
+                        <img src="Images/Maria_Garcia.jpg" alt="Maria Garcia, Volunteer Manager coordinating community efforts." class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-green-600"/>
+                        <h4 class="text-xl font-bold text-gray-900 mb-1">Maria Garcia</h4>
+                        <span class="text-green-600 font-medium">Volunteer Manager</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

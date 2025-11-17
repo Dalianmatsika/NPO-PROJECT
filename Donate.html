@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now to Support Our Community Programs | The Helping Hand</title>
+    <meta name="description" content="Your financial donation directly funds our free tutoring, mental health, and job assistance programs. Donate securely today to make a difference.">
+    
+    <link href="Style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
+
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-green-600 transition-colors border-b-2 border-green-600">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mt-4 md:mt-0">
+                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-2xl text-center">
+                <h1 class="mb-4 text-4xl font-bold text-green-600">Invest in Our Community's Future</h1>
+                <p class="text-xl text-gray-700 mb-10">Your contribution makes a direct impact on the lives of local families and children.</p>
+
+                <div class="bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-left">Make a Secure Donation</h2>
+                    
+                    <form action="mailto:donations@helpinghand.org" method="post" enctype="text/plain" class="space-y-4">
+                        <div class="mb-4">
+                            <label for="name" class="block font-medium mb-1 text-left">Your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block font-medium mb-1 text-left">Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="amount" class="block font-medium mb-1 text-left">Donation Amount (R):</label>
+                            <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="e.g., 25" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700">Donate Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
