@@ -7,12 +7,16 @@
     <meta name="description" content="The leading NPO providing free academic tutoring, job assistance, and mental health support to uplift and empower the local community in Cape Town.">
     
     <link rel="stylesheet" href="style.css">
-    <link href="Style.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles to ensure the look matches the rest of the site */
         body { font-family: 'Roboto', sans-serif; }
         h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
+
+        /* Style for testimonial slides (retained your existing JS classes) */
+        .testimonial-slide.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
@@ -20,6 +24,7 @@
     <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            
             <nav class="mt-4 md:mt-0">
                 <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
                     <li><a href="Homepage.html" class="font-medium text-green-600 transition-colors border-b-2 border-green-600">Home Page</a></li>
@@ -32,12 +37,20 @@
                     <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mt-4 md:mt-0">
-                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            
+            <div class="button-logo-wrapper mt-4 md:mt-0 flex items-center gap-4">
+                <a href="donate.html" class="px-6 py-2 rounded-full text-white font-medium bg-green-600 shadow-md transition-colors hover:bg-green-700 whitespace-nowrap text-sm">Donate Now</a>
+
+                <a href="index.html" class="hidden md:block text-green-600 hover:text-green-700 transition-colors" title="Secondary Logo/Partner Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart">
+                        <path d="M11 11a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/>
+                        <path d="M12 2C9.24 2 7 4.24 7 7c0 3.82 5 9 5 9s5-5.18 5-9c0-2.76-2.24-5-5-5z"/>
+                        <path d="M17.5 16h2a2 2 0 0 0 2-2v-2h-3a4 4 0 0 0-4 4v3a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 0-2-2h-3v2a2 2 0 0 0 2 2h2"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
-
     <main class="flex-grow">
         <section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('Images/hero-image.jpg');">
             <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -45,57 +58,127 @@
                 <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">Empowering Our Community, One Step at a Time</h1>
                 <p class="text-xl md:text-2xl mb-8">Providing free resources for education, employment, and well-being.</p>
                 <div class="space-x-4">
-                    <a href="donate.html" class="px-8 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-colors text-lg">Donate Today</a>
-                    <a href="programs.html" class="px-8 py-3 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-colors text-lg">See Our Programs</a>
+                    <a href="donate.html" class="px-8 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-colors text-lg shadow-md">Donate Today</a>
+                    <a href="programs.html" class="px-8 py-3 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-colors text-lg shadow-md">See Our Programs</a>
                 </div>
             </div>
         </section>
 
         <section class="py-16">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-green-600 mb-10">Explore Our Programs</h2>
+                <h2 class="text-center mb-10 text-4xl font-extrabold text-gray-900 leading-tight">Explore Our Programs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="grid-item p-6 border-t-4 border-green-600 bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]">
+                    <div class="grid-item p-6 border-t-4 border-green-600 bg-gray-50 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                         <a href="programs.html">
-                            <img src="Images/School_Homework-Tutoring_Article-847_Girl-tutor-library-ts_474967154-1.webp" alt="Icon representing After-School Tutoring program." class="w-16 h-16 mx-auto mb-4">
+                            <img src="After School Tutoring.jpg" alt="Icon representing After-School Tutoring program." class="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-green-600 p-1">
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">After-School Tutoring</h3>
                             <p class="text-gray-600">Provides academic support for students of all ages...</p>
                         </a>
                     </div>
-                    <div class="grid-item p-6 border-t-4 border-green-600 bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]">
+                    <div class="grid-item p-6 border-t-4 border-green-600 bg-gray-50 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                         <a href="programs.html">
-                            <img src="Images/icon_job.png" alt="Icon representing Job Placement Assistance program." class="w-16 h-16 mx-auto mb-4">
+                            <img src="job seekers replacement.jpg" alt="Icon representing Job Placement Assistance program." class="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-green-600 p-1">
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">Job Placement Assistance</h3>
                             <p class="text-gray-600">Connects job seekers with local employers...</p>
                         </a>
                     </div>
-                    <div class="grid-item p-6 border-t-4 border-green-600 bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02]">
+                    <div class="grid-item p-6 border-t-4 border-green-600 bg-gray-50 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                         <a href="programs.html">
-                            <img src="Images/icon_health.png" alt="Icon representing Mental Health Support program." class="w-16 h-16 mx-auto mb-4">
+                            <img src="Mental health support.jpg" alt="Icon representing Mental Health Support program." class="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-green-600 p-1">
                             <h3 class="text-2xl font-bold text-gray-900 mb-2">Mental Health Support</h3>
                             <p class="text-gray-600">Offers free counseling sessions and support groups...</p>
                         </a>
                     </div>
                 </div>
-                <div class="text-center mt-10">
-                    <a href="programs.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">View All Programs</a>
+                <div class="text-center mt-12">
+                    <a href="programs.html" class="px-8 py-3 rounded-full text-white font-bold bg-green-600 shadow-md hover:shadow-lg transition-all hover:bg-green-700 text-lg">View All Programs</a>
                 </div>
             </div>
         </section>
+
+        <hr class="border-gray-200">
+
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-10 leading-tight">Hear from Our Community</h2>
+                
+                <div id="testimonial-carousel" class="relative">
+                    
+                    <div class="testimonial-slide p-8 bg-white rounded-xl shadow-lg transition-opacity duration-1000 opacity-0">
+                        <blockquote class="text-xl italic text-gray-700 mb-4">
+                            "The free tutoring program was a game-changer. My daughter went from struggling in Math to achieving top marks. Thank you, The Helping Hand, for opening up doors to her future."
+                        </blockquote>
+                        <p class="font-semibold text-lg text-green-600">– Sarah M., Parent</p>
+                    </div>
+
+                    <div class="testimonial-slide hidden p-8 bg-white rounded-xl shadow-lg transition-opacity duration-1000 opacity-0">
+                        <blockquote class="text-xl italic text-gray-700 mb-4">
+                            "After months of searching, the Job Placement Assistance team helped me tailor my CV and prepare for interviews. I secured a stable job within three weeks! This service is truly essential."
+                        </blockquote>
+                        <p class="font-semibold text-lg text-green-600">– Lwando T., Job Seeker</p>
+                    </div>
+
+                    <div class="testimonial-slide hidden p-8 bg-white rounded-xl shadow-lg transition-opacity duration-1000 opacity-0">
+                        <blockquote class="text-xl italic text-gray-700 mb-4">
+                            "The mental health support group provided a safe space I desperately needed. Knowing I wasn't alone in my struggles made all the difference. Confidential and compassionate help."
+                        </blockquote>
+                        <p class="font-semibold text-lg text-green-600">– Anonymous, Support Group Member</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
         
+        <hr class="border-gray-200">
+
         <section class="py-16 bg-green-600 text-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-4xl font-bold mb-4 text-white">Be The Change. Volunteer Today.</h2>
                 <p class="text-xl mb-8">Your time and skills are invaluable to our community. Join our network of dedicated volunteers.</p>
-                <a href="volunteer.html" class="px-8 py-3 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-200 transition-colors text-lg">Sign Up to Volunteer</a>
+                <a href="volunteer.html" class="px-8 py-3 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-200 transition-colors text-lg shadow-md">Sign Up to Volunteer</a>
             </div>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
         <div class="container mx-auto px-4">
-            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
+            <p class="text-base">© 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            let currentSlide = 0;
+            const intervalTime = 7000; // 7 seconds
+
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.add('hidden', 'opacity-0');
+                    slide.classList.remove('opacity-100');
+                });
+
+                // Show the current slide with fade-in effect
+                slides[index].classList.remove('hidden');
+                // Use a small delay for the browser to register the 'hidden' removal before applying opacity change
+                setTimeout(() => {
+                    slides[index].classList.remove('opacity-0');
+                    slides[index].classList.add('opacity-100');
+                }, 50); 
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            // Initialize the carousel
+            if (slides.length > 0) {
+                showSlide(currentSlide);
+                setInterval(nextSlide, intervalTime);
+            }
+        });
+    </script>
 </body>
 </html>

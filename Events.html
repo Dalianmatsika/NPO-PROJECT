@@ -7,8 +7,10 @@
     <meta name="description" content="View all upcoming community events, fundraising galas, and educational workshops hosted by The Helping Hand. Get involved and check event dates.">
     
     <link href="Style.css" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom font stack for a professional feel */
         body { font-family: 'Roboto', sans-serif; }
         h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
     </style>
@@ -18,6 +20,7 @@
     <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            
             <nav class="mt-4 md:mt-0">
                 <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
                     <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
@@ -30,48 +33,50 @@
                     <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mt-4 md:mt-0">
-                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            
+            <div class="button-logo-wrapper mt-4 md:mt-0 flex items-center gap-4">
+                <a href="donate.html" class="px-6 py-2 rounded-full text-white font-medium bg-green-600 shadow-md transition-colors hover:bg-green-700 whitespace-nowrap text-sm">Donate Now</a>
+
+                <a href="index.html" class="hidden md:block text-green-600 hover:text-green-700 transition-colors" title="Secondary Logo/Partner Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart">
+                        <path d="M11 11a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/>
+                        <path d="M12 2C9.24 2 7 4.24 7 7c0 3.82 5 9 5 9s5-5.18 5-9c0-2.76-2.24-5-5-5z"/>
+                        <path d="M17.5 16h2a2 2 0 0 0 2-2v-2h-3a4 4 0 0 0-4 4v3a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 0-2-2h-3v2a2 2 0 0 0 2 2h2"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
-
     <main class="flex-grow">
-        <section class="py-16">
+        <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-4 max-w-4xl">
                 <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Upcoming Events & Workshops</h1>
                 <p class="text-lg text-center max-w-2xl mx-auto mb-10 text-gray-600">Join us for a fundraising event, skill workshop, or community gathering. Your participation strengthens our mission.</p>
                 
                 <ul class="space-y-6">
-                    <li class="bg-gray-100 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl border-l-4 border-green-600">
+                    <li class="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:shadow-xl border-l-4 border-green-600">
                         <h4 class="text-xl font-bold mb-2 text-gray-900">Financial Literacy Workshop</h4>
-                        <p class="text-gray-600 mb-1">
-                            <span class="font-medium text-gray-900">Date:</span> September 15, 2025
+                        <p class="text-sm text-gray-500 mb-3 flex flex-wrap gap-x-4">
+                            <span class="font-medium text-green-700">September 15, 2025</span>
+                            <span class="font-medium text-green-700">10:00 AM - 13:00 PM</span>
                         </p>
-                        <p class="text-gray-600 mb-1">
-                            <span class="font-medium text-gray-900">Time:</span> 10:00 AM - 1:00 PM
-                        </p>
-                        <p class="text-gray-600">Learn essential budgeting skills, debt management, and savings strategies in this free community workshop. Limited spots available.</p>
+                        <p class="text-gray-700">Learn essential budgeting skills, debt management, and savings strategies in this free community workshop. Limited spots available.</p>
                     </li>
-                    <li class="bg-gray-100 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl border-l-4 border-green-600">
+                    <li class="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:shadow-xl border-l-4 border-green-600">
                         <h4 class="text-xl font-bold mb-2 text-gray-900">New Volunteer Orientation</h4>
-                        <p class="text-gray-600 mb-1">
-                            <span class="font-medium text-gray-900">Date:</span> October 5, 2025
+                        <p class="text-sm text-gray-500 mb-3 flex flex-wrap gap-x-4">
+                            <span class="font-medium text-green-700">October 5, 2025</span>
+                            <span class="font-medium text-green-700">18:00 PM</span>
                         </p>
-                        <p class="text-gray-600 mb-1">
-                            <span class="font-medium text-gray-900">Time:</span> 6:00 PM
-                        </p>
-                        <p class="text-gray-600">A mandatory session for all new volunteers to learn about our mission and different volunteer roles.</p>
+                        <p class="text-gray-700">A mandatory session for all new volunteers to learn about our mission and different volunteer roles.</p>
                     </li>
-                    <li class="bg-gray-100 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl border-l-4 border-green-600">
+                    <li class="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:shadow-xl border-l-4 border-green-600">
                         <h4 class="text-xl font-bold mb-2 text-gray-900">Annual Fundraising Gala</h4>
-                        <p class="text-gray-600 mb-1">
-                            <span class="font-medium text-gray-900">Date:</span> November 20, 2025
+                        <p class="text-sm text-gray-500 mb-3 flex flex-wrap gap-x-4">
+                            <span class="font-medium text-green-700">November 20, 2025</span>
+                            <span class="font-medium text-green-700">19:00 PM</span>
                         </p>
-                        <p class="text-gray-600 mb-1">
-                            <span class="font-medium text-gray-900">Time:</span> 7:00 PM
-                        </p>
-                        <p class="text-gray-600">An evening of celebration and fundraising to support our ongoing community programs. Tickets available soon.</p>
+                        <p class="text-gray-700">An evening of celebration and fundraising to support our ongoing community programs. Tickets available soon.</p>
                     </li>
                 </ul>
             </div>
@@ -83,5 +88,5 @@
             <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
         </div>
     </footer>
-</body>
+    </body>
 </html>

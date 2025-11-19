@@ -3,242 +3,239 @@
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Community Programs & Services | Free Tutoring, Job Assistance - The Helping Hand</title>
-  <meta name="description"
-    content="Explore The Helping Hand Community's diverse, free programs: After-School Tutoring, Job Placement Assistance, Mental Health Support, and Community Workshops. Find help today.">
+    <title>Community Programs & Services | Free Tutoring, Job Assistance - The Helping Hand</title>
+    <meta name="description"
+        content="Explore The Helping Hand Community's diverse, free programs: After-School Tutoring, Job Placement Assistance, Mental Health Support, and Community Workshops. Find help today.">
 
 
-  <link href="Style.css" rel="stylesheet">
+    <link href="Style.css" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: 'Merriweather', serif;
-    }
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Merriweather', serif;
+        }
 
-    .program-accordion-header:hover {
-      color: #10B981;
-    }
+        /* Ensure the hover state is visually distinct */
+        .program-accordion-header:hover {
+            color: #10B981; /* Tailwind green-500 equivalent */
+        }
 
-    /* Tailwind green-500 hover color */
-    .hidden {
-      display: none;
-    }
-
-    /* For Accordion/Search functionality */
-  </style>
+        /* Base class for JS accordion logic */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
 
-  <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <a href="index.html"
-        class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand
-        Community</a>
-      <nav class="mt-4 md:mt-0">
-        <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
-          <li><a href="Homepage.html"
-              class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
-          <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About
-              Us</a></li>
-          <li><a href="programs.html"
-              class="font-medium text-green-600 transition-colors border-b-2 border-green-600">Our
-              Programs</a></li>
-          <li><a href="events.html"
-              class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
-          <li><a href="volunteer.html"
-              class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
-          <li><a href="donate.html"
-              class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
-          <li><a href="blog.html"
-              class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
-          <li><a href="contact.html"
-              class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="mt-4 md:mt-0">
-        <a href="donate.html"
-          class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
-      </div>
-    </div>
-  </header>
+    <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            
+            <nav class="mt-4 md:mt-0">
+                <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
+                    <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
+                    <li><a href="about.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="font-medium text-green-600 transition-colors border-b-2 border-green-600">Our Programs</a></li>
+                    <li><a href="events.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Events</a></li>
+                    <li><a href="volunteer.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Volunteer</a></li>
+                    <li><a href="donate.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Donate</a></li>
+                    <li><a href="blog.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Blog/News</a></li>
+                    <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="button-logo-wrapper mt-4 md:mt-0 flex items-center gap-4">
+                <a href="donate.html" class="px-6 py-2 rounded-full text-white font-medium bg-green-600 shadow-md transition-colors hover:bg-green-700 whitespace-nowrap text-sm">Donate Now</a>
 
-  <main class="flex-grow">
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Our Programs</h1>
-        <p class="text-lg text-center max-w-2xl mx-auto mb-8">Explore our diverse range of services
-          designed to support our community members. **Click a program title to learn more!**</p>
-
-        <div class="max-w-xl mx-auto mb-12">
-          <input type="text" id="programSearch" placeholder="Filter programs by keyword (e.g., tutoring, health, job)"
-            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <a href="index.html" class="hidden md:block text-green-600 hover:text-green-700 transition-colors" title="Secondary Logo/Partner Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart">
+                        <path d="M11 11a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/>
+                        <path d="M12 2C9.24 2 7 4.24 7 7c0 3.82 5 9 5 9s5-5.18 5-9c0-2.76-2.24-5-5-5z"/>
+                        <path d="M17.5 16h2a2 2 0 0 0 2-2v-2h-3a4 4 0 0 0-4 4v3a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 0-2-2h-3v2a2 2 0 0 0 2 2h2"/>
+                    </svg>
+                </a>
+            </div>
         </div>
+    </header>
+    <main class="flex-grow">
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Our Programs</h1>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-8">Explore our diverse range of services
+                    designed to support our community members.   Click a program title to learn more!</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="max-w-xl mx-auto mb-12">
+                    <input type="text" id="programSearch" placeholder="Filter programs by keyword (e.g., tutoring, health, job)"
+                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600">
+                </div>
 
-          <div
-            class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
-            <img src="Images/tutoring.webp"
-              alt="Volunteer tutor helping a student with homework, promoting education programs."
-              class="w-full h-48 object-cover border-b-2 border-green-600">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
-                After-School Tutoring
-                <span class="float-right text-green-600 toggle-icon">+</span>
-              </h3>
-              <div class="program-accordion-content hidden">
-                <p class="text-gray-600 mt-2 text-sm">Provides comprehensive academic
-                  support for students of all ages in Math, Science, and English. We offer specialized help with
-                  homework, standardized test preparation, and personalized learning plans.</p>
-                <a href="enquiry.html"
-                  class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">Enquire about
-                  Tutoring</a>
-              </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+
+                    <div
+                        class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
+                        <img src="Homework Tutoring_Article-847_Girl-tutor-library-ts_474967154-1.webp"
+                            alt="Volunteer tutor helping a student with homework, promoting education programs."
+                            class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
+                                After-School Tutoring
+                                <span class="float-right text-green-600 toggle-icon">+</span>
+                            </h3>
+                            <div class="program-accordion-content hidden">
+                                <p class="text-gray-600 mt-2 text-sm">Provides comprehensive academic
+                                    support for students of all ages in Math, Science, and English. We offer specialized help with
+                                    homework, standardized test preparation, and personalized learning plans.</p>
+                                <a href="enquiry.html"
+                                    class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">Enquire about
+                                    Tutoring</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
+                        <img src="jobfair1.jpg"
+                            alt="Local job fair with people networking, emphasizing job assistance."
+                            class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
+                                Job Placement Assistance
+                                <span class="float-right text-green-600 toggle-icon">+</span>
+                            </h3>
+                            <div class="program-accordion-content hidden">
+                                <p class="text-gray-600 mt-2 text-sm">Our program connects job seekers with
+                                    local employers, provides tailored resume writing workshops, and offers essential interview coaching
+                                    to boost confidence and employment rates.</p>
+                                <a href="enquiry.html"
+                                    class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">Enquire about Job
+                                    Assistance</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
+                        <img src="Mental health support.jpg"
+                            alt="A person receiving confidential counseling from a mental health professional."
+                            class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
+                                Mental Health Support
+                                <span class="float-right text-green-600 toggle-icon">+</span>
+                            </h3>
+                            <div class="program-accordion-content hidden">
+                                <p class="text-gray-600 mt-2 text-sm">Offers free and confidential
+                                    counseling sessions and support groups (virtual and in-person) to promote emotional well-being and
+                                    resilience. We connect you with accredited therapists.</p>
+                                <a href="enquiry.html"
+                                    class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">Enquire about
+                                    Support</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
+                        <img src="Community Workshop.jpg"
+                            alt="People collaborating in a financial literacy workshop, focusing on life skills."
+                            class="w-full h-48 object-cover border-b-2 border-green-600">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
+                                Community Workshops
+                                <span class="float-right text-green-600 toggle-icon">+</span>
+                            </h3>
+                            <div class="program-accordion-content hidden">
+                                <p class="text-gray-600 mt-2 text-sm">From financial literacy and digital
+                                    skills training to parenting techniques and home maintenance, our regular workshops are designed to
+                                    equip community members with practical life skills and resources.</p>
+                                <a href="events.html"
+                                    class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">View Upcoming
+                                    Workshops</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
-          </div>
+        </section>
+    </main>
 
-          <div
-            class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
-            <img src="Images/jobfair.jpg"
-              alt="Local job fair with people networking, emphasizing job assistance."
-              class="w-full h-48 object-cover border-b-2 border-green-600">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
-                Job Placement Assistance
-                <span class="float-right text-green-600 toggle-icon">+</span>
-              </h3>
-              <div class="program-accordion-content hidden">
-                <p class="text-gray-600 mt-2 text-sm">Our program connects job seekers with
-                  local employers, provides tailored resume writing workshops, and offers essential interview coaching
-                  to boost confidence and employment rates.</p>
-                <a href="enquiry.html"
-                  class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">Enquire about Job
-                  Assistance</a>
-              </div>
-
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
-            <img src="Images/counseling.jpeg"
-              alt="A person receiving confidential counseling from a mental health professional."
-              class="w-full h-48 object-cover border-b-2 border-green-600">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
-                Mental Health Support
-                <span class="float-right text-green-600 toggle-icon">+</span>
-              </h3>
-              <div class="program-accordion-content hidden">
-                <p class="text-gray-600 mt-2 text-sm">Offers free and confidential
-                  counseling sessions and support groups (virtual and in-person) to promote emotional well-being and
-                  resilience. We connect you with accredited therapists.</p>
-                <a href="enquiry.html"
-                  class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">Enquire about
-                  Support</a>
-              </div>
-
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-100 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 program-card">
-            <img src="Images/workshop.jpg"
-              alt="People collaborating in a financial literacy workshop, focusing on life skills."
-              class="w-full h-48 object-cover border-b-2 border-green-600">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-gray-900 cursor-pointer program-accordion-header" tabindex="0">
-                Community Workshops
-                <span class="float-right text-green-600 toggle-icon">+</span>
-              </h3>
-              <div class="program-accordion-content hidden">
-                <p class="text-gray-600 mt-2 text-sm">From financial literacy and digital
-                  skills training to parenting techniques and home maintenance, our regular workshops are designed to
-                  equip community members with practical life skills and resources.</p>
-                <a href="events.html"
-                  class="inline-block mt-3 text-green-600 hover:text-green-800 font-semibold text-xs">View Upcoming
-                  Workshops</a>
-              </div>
-
-            </div>
-          </div>
-
+    <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
         </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // =========================================================
+            // 2.1 Interactive Elements: Accordion Logic
+            // =========================================================
+            const headers = document.querySelectorAll('.program-accordion-header');
 
-      </div>
-    </section>
-  </main>
+            headers.forEach(header => {
+                header.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
 
-  <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
-    <div class="container mx-auto px-4">
-      <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
-    </div>
-  </footer>
+                    // Toggle the current panel
+                    content.classList.toggle('hidden');
+                    icon.textContent = content.classList.contains('hidden') ? '+' : '-';
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // =========================================================
-      // 2.1 Interactive Elements: Accordion Logic
-      // =========================================================
-      const headers = document.querySelectorAll('.program-accordion-header');
+                    // Close other open panels
+                    document.querySelectorAll('.program-accordion-content').forEach(otherContent => {
+                        if (otherContent !== content && !otherContent.classList.contains('hidden')) {
+                            otherContent.classList.add('hidden');
+                            const otherIcon = otherContent.previousElementSibling.querySelector('.toggle-icon');
+                            if (otherIcon) otherIcon.textContent = '+';
+                        }
+                    });
+                });
+            });
 
-      headers.forEach(header => {
-        header.addEventListener('click', function () {
-          const content = this.nextElementSibling;
-          const icon = this.querySelector('.toggle-icon');
+            const searchInput = document.getElementById('programSearch');
+            const programCards = document.querySelectorAll('.program-card');
 
-          content.classList.toggle('hidden');
-          icon.textContent = content.classList.contains('hidden') ? '+' : '-';
+            searchInput.addEventListener('keyup', function () {
+                const searchTerm = searchInput.value.toLowerCase().trim();
 
-          // Close other open panels
-          document.querySelectorAll('.program-accordion-content').forEach(otherContent => {
-            if (otherContent !== content && !otherContent.classList.contains('hidden')) {
-              otherContent.classList.add('hidden');
-              const otherIcon = otherContent.previousElementSibling.querySelector('.toggle-icon');
-              if (otherIcon) otherIcon.textContent = '+';
-            }
-          });
+                programCards.forEach(card => {
+                    // Search in title and expanded content
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    // Note: If the accordion content is not yet structured, this might need refinement.
+                    // Assuming the structure is stable for search function.
+                    const descriptionElement = card.querySelector('.program-accordion-content p');
+                    const description = descriptionElement ? descriptionElement.textContent.toLowerCase() : '';
+                    
+                    const searchableText = title + description;
+
+                    if (searchableText.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
-      });
-
-      // =========================================================
-      // 2.2 Dynamic Content: Search/Filter Logic
-      // =========================================================
-      const searchInput = document.getElementById('programSearch');
-      const programCards = document.querySelectorAll('.program-card');
-
-      searchInput.addEventListener('keyup', function () {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-
-        programCards.forEach(card => {
-          // Search in title and expanded content
-          const title = card.querySelector('h3').textContent.toLowerCase();
-          const description = card.querySelector('.program-accordion-content p').textContent.toLowerCase();
-          const searchableText = title + description;
-
-          if (searchableText.includes(searchTerm)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
+    </script>
 
 </body>
 

@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Mission, Vision & Team | About The Helping Hand Community</title>
-    <meta name="description" content="Learn about The Helping Hand Community's mission to support local families in Cape Town. Meet our dedicated team and view our vision for the future.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>About Us – The Helping Hand Community</title>
+    <meta name="description" content="Learn about The Helping Hand Community’s mission, vision, and meet our team dedicated to serving the community.">
+
     <link href="Style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
     <style>
-        /* CSS styles remain consistent */
-        :root {
-            --primary-color: #4CAF50; /* Green */
-            --dark-color: #333333;
-            --medium-gray: #f4f4f4;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        body { font-family: 'Roboto', sans-serif; font-size: 18px; }
-        h1, h2, h3, h4 { font-family: 'Merriweather', serif; color: var(--primary-color); text-align: center; }
-        .hidden { display: none; }
+        /* Custom font styles for the site */
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
     </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        green: {
+                            600: '#059669',
+                            700: '#047857',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body class="bg-white text-gray-800 leading-relaxed flex flex-col min-h-screen">
 
     <header class="bg-white p-4 sticky top-0 z-10 shadow-md">
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-green-600 hover:text-green-800 transition-colors">The Helping Hand Community</a>
+            
             <nav class="mt-4 md:mt-0">
                 <ul class="list-none flex flex-wrap justify-center md:space-x-6 space-x-2 text-sm md:text-base">
                     <li><a href="Homepage.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Home Page</a></li>
@@ -39,55 +53,74 @@
                     <li><a href="contact.html" class="font-medium text-gray-800 hover:text-green-600 transition-colors">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mt-4 md:mt-0">
-                <a href="donate.html" class="px-6 py-3 rounded-full text-white font-medium bg-green-600 transition-colors hover:bg-green-700 whitespace-nowrap">Donate</a>
+            
+            <div class="button-logo-wrapper mt-4 md:mt-0 flex items-center gap-4">
+                <a href="donate.html" class="px-6 py-2 rounded-full text-white font-medium bg-green-600 shadow-md transition-colors hover:bg-green-700 whitespace-nowrap text-sm">Donate Now</a>
+
+                <a href="index.html" class="hidden md:block text-green-600 hover:text-green-700 transition-colors" title="Secondary Logo/Partner Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart">
+                        <path d="M11 11a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/>
+                        <path d="M12 2C9.24 2 7 4.24 7 7c0 3.82 5 9 5 9s5-5.18 5-9c0-2.76-2.24-5-5-5z"/>
+                        <path d="M17.5 16h2a2 2 0 0 0 2-2v-2h-3a4 4 0 0 0-4 4v3a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 0-2-2h-3v2a2 2 0 0 0 2 2h2"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
-
     <main class="flex-grow">
-        <section class="py-16">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <h1 class="text-center mb-8 text-4xl font-bold text-green-600">Our Story and Team</h1>
 
-                <div class="bg-gray-100 p-8 rounded-xl shadow-lg mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Mission & Vision</h2>
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+
+                <h1 class="text-center mb-12 text-5xl font-extrabold text-gray-900 leading-tight">About Our Community</h1>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl border border-gray-100 mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Mission & Vision</h2>
+
                     <div class="space-y-6 text-gray-700 text-lg">
-                        <p class="text-center">**Mission:** To empower the local community by providing free access to essential services in education, employment, and mental health support, fostering resilience and independence.</p>
-                        <p class="text-center">**Vision:** To build a self-sustaining community where every individual has the opportunity to thrive, free from the barriers of poverty and limited resources.</p>
+                        <p class="text-center">
+                            <span class="font-bold">Mission:</span> To empower the local community by providing access to education, employment support, and mental health services—building resilience and independence.
+                        </p>
+
+                        <p class="text-center">
+                            <span class="font-bold">Vision:</span> To create a self-sustaining community where every individual can thrive, free from the barriers of poverty and limited opportunities.
+                        </p>
                     </div>
                 </div>
 
-                <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Meet Our Dedicated Team</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Meet Our Team</h2>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-                    
-                    <div class="team-member-css p-4 bg-white rounded-lg shadow-md">
-                        <img src="Images/Jane_Doe.jpg" alt="Jane Doe, Executive Director of The Helping Hand Community." class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-green-600"/>
-                        <h4 class="text-xl font-bold text-gray-900 mb-1">Jane Doe</h4>
-                        <span class="text-green-600 font-medium">Executive Director</span>
-                    </div>
-                    
-                    <div class="team-member-css p-4 bg-white rounded-lg shadow-md">
-                        <img src="Images/John_Smith.jpg" alt="John Smith, Program Coordinator for educational services." class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-green-600"/>
-                        <h4 class="text-xl font-bold text-gray-900 mb-1">John Smith</h4>
-                        <span class="text-green-600 font-medium">Program Coordinator</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="Lauren.jpg" alt="Photo of Lauren John" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-green-600">
+                        <h3 class="text-xl font-bold text-gray-900">Lauren John</h3>
+                        <p class="text-green-600 font-semibold mb-3">Executive Director</p>
+                        <p class="text-gray-600 text-sm">Zola founded The Helping Hand with a vision to eliminate educational inequality in Cape Town's townships.</p>
                     </div>
 
-                    <div class="team-member-css p-4 bg-white rounded-lg shadow-md">
-                        <img src="Images/Maria_Garcia.jpg" alt="Maria Garcia, Volunteer Manager coordinating community efforts." class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-green-600"/>
-                        <h4 class="text-xl font-bold text-gray-900 mb-1">Maria Garcia</h4>
-                        <span class="text-green-600 font-medium">Volunteer Manager</span>
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="Joseph.jpg" alt="Photo of Joseph van Wyk" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-green-600">
+                        <h3 class="text-xl font-bold text-gray-900">Joseph van Wyk</h3>
+                        <p class="text-green-600 font-semibold mb-3">Programs Manager</p>
+                        <p class="text-gray-600 text-sm">Chris oversees the implementation and growth of all our tutoring and job assistance programs.</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src="Maria.jpg" alt="Photo of Maria Sarah" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-green-600">
+                        <h3 class="text-xl font-bold text-gray-900">Maria Sarah</h3>
+                        <p class="text-green-600 font-semibold mb-3">Community Liaison & Wellness Lead</p>
+                        <p class="text-gray-600 text-sm">Thandiwe coordinates community outreach and leads the mental health support initiative.</p>
                     </div>
                 </div>
-            </div>
+                </div>
         </section>
+        
     </main>
-
+    
     <footer class="bg-gray-800 text-white py-8 text-center mt-auto">
         <div class="container mx-auto px-4">
-            <p>&copy; 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
+            <p class="text-base">© 2025 The Helping Hand Community Centre. All Rights Reserved.</p>
         </div>
     </footer>
-</body>
+    </body>
 </html>

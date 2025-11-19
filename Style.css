@@ -1,412 +1,416 @@
-/* =========================================
-   1. BASE & UTILITIES
-   ========================================= */
+/* =====================================================================
+    STYLE.CSS (Full Updated, Stylish, and Animated Version)
+======================================================================== */
 
-/* A simple CSS Reset to ensure consistent styling across different browsers */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-outline
-
-/* Base Styles, Color Palette, and Typography */
+/* --- 0. VARIABLES & GLOBALS --- */
 :root {
-    --primary-color: #4CAF50; /* Green */
-    --secondary-color: #FFC107; /* Amber/Yellow */
-    --dark-color: #333333;
-    --light-color: #ffffff;
-    --medium-gray: #f4f4f4;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Primary Color Palette (Vibrant Green & Deep Teal) - ADJUSTED FOR CONTRAST */
+    --color-primary: #04AA6D;       /* A bright, professional green */
+    --color-primary-dark: #038C5A;  /* Darker shade for hover/active (Slightly deeper) */
+    --color-secondary-bg: #F5FFF9;  /* Very light mint/green tint for sections (Lighter, more subtle) */
+    
+    /* Neutral & Text Colors - ADJUSTED FOR BETTER ACCESSIBILITY/CONTRAST */
+    --color-text-dark: #1F2937;     /* Near-black for headings */
+    --color-text-light: #374151;    /* Darker gray for body text (Better contrast) */
+    --color-bg-footer: #1F2937;     /* Deep dark gray for footer (Matched to text-dark for consistency) */
+    --color-border-light: #E5E7EB;  /* New variable for consistent border color */
+    
+    /* Shadows - ENHANCED FOR DEPTH */
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 15px -3px rgba(0, 0, 0, 0.12); /* Increased spread */
+    --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.15); /* Much deeper shadow */
+
+    /* Glassmorphism Effect Variable */
+    --glass-blur: 8px;
+    --glass-background: rgba(255, 255, 255, 0.6);
 }
 
-html {
-    font-size: 16px; /* Sets a base for rem units */
-}
-
+/* --- 1. BASE TYPOGRAPHY & STRUCTURE --- */
 body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--dark-color);
-    line-height: 1.6;
-    background-color: var(--light-color);
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: #f7f9fb; /* Slight off-white background for depth */
+    color: var(--color-text-light);
+    line-height: 1.65; /* Slightly increased line height */
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
 }
 
-/* Enhanced Heading Alignment */
 h1, h2, h3 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
+    font-family: 'Merriweather', 'Inter', serif;
+    color: var(--color-text-dark);
     line-height: 1.2;
-    margin-bottom: 0.5em;
-    color: var(--primary-color);
-    /* 👇 FOR CONSISTENCY: ALL MAJOR HEADINGS ARE CENTERED */
-    text-align: center;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+/* Base Utility Replacements */
+.text-green-600 { color: var(--color-primary); }
+.bg-green-600 { background-color: var(--color-primary); }
 
-p {
-    margin-bottom: 1em;
-}
+/* --- 2. STRUCTURAL COMPONENTS (RENAMED) --- */
 
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--dark-color);
-}
-
-.section-title {
-    /* Kept for pages that don't use the Tailwind banner h1 */
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-/* General Layout */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.section {
-    padding: 4rem 0;
-}
-
-/* Buttons */
-.btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-}
-
-.btn-primary:hover {
-    background-color: #45a049;
-}
-
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-}
-
-.btn-secondary:hover {
-    background-color: #e0ac00;
-}
-
-.text-center {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-/* =========================================
-   2. HEADER & FOOTER
-   ========================================= */
-
-/* NOTE: Tailwind classes in your HTML handle most of the header styling.
-   These styles are for compatibility with old HTML structures.
-*/
-header {
-    background-color: var(--light-color);
+/* Renamed: main-header - GLASSMORPHISM EFFECT & TRANSITION */
+.main-header {
+    background-color: var(--glass-background); /* Semi-transparent white */
+    backdrop-filter: blur(var(--glass-blur)); /* The Glass effect */
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    box-shadow: var(--box-shadow);
+    z-index: 100; 
+    box-shadow: var(--shadow-sm); 
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5); 
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Header state when scrolled (requires JS to add the class) */
+.main-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-md);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    font-weight: 500;
-    color: var(--dark-color);
-    transition: color 0.3s ease;
-}
-
-/* Footer */
-footer {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    padding: 2rem 0;
+/* Renamed: main-footer */
+.main-footer {
+    background-color: var(--color-bg-footer);
+    color: #DBEAFE; 
+    padding-top: 4rem; 
+    padding-bottom: 3rem; 
     text-align: center;
-}
-
-/* --- Page Header Banner (The green/gray bar below the main nav) --- */
-/* (Assuming you are using the Tailwind green banner, this original CSS is less critical, 
-   but kept for pages not using the Tailwind component.) */
-.page-header-banner {
-    background-color: var(--medium-gray);
-    border-bottom: 5px solid var(--primary-color);
-    padding: 3rem 0;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-}
-
-.page-header-banner h1 {
-    color: var(--dark-color);
-    font-size: 2.5rem;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* =========================================
-   3. SECTION STYLES
-   ========================================= */
-
-/* Hero Section */
-.hero {
+    margin-top: auto;
+    font-size: 0.95rem;
+    border-top: 6px solid var(--color-primary); 
     position: relative;
-    height: 80vh;
-    background: url('https://placehold.co/1920x1080/4CAF50/FFFFFF?text=Community+Hands') no-repeat center center/cover;
-    display: flex;
+}
+
+/* --- 3. COMMON INTERACTIVE ELEMENTS --- */
+
+/* Primary Button - MORE PRONOUNCED GRADIENT & SHADOW */
+.primary-button {
+    padding: 0.85rem 1.8rem; 
+    border-radius: 9999px;
+    color: #ffffff;
+    font-weight: 700; 
+    background-image: linear-gradient(135deg, #06D6A0, var(--color-primary), #059669);
+    background-size: 200% auto; 
+    transition: all 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), box-shadow 0.4s ease, background-position 0.4s;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(4, 170, 109, 0.45); 
+    letter-spacing: 0.5px;
+}
+
+.primary-button:hover {
+    background-position: right center; 
+    transform: translateY(-4px) rotate(-0.5deg); 
+    box-shadow: 0 15px 35px rgba(4, 170, 109, 0.7);
+}
+
+/* Renamed: main-nav - Underline reveal effect */
+.main-nav a {
+    color: var(--color-text-light);
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    transition: color 0.3s, opacity 0.3s;
+    position: relative;
+    padding-bottom: 10px; /* Space for the underline */
+}
+
+.main-nav a:hover {
+    color: var(--color-primary);
+    opacity: 0.8;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: width 0.4s ease-in-out;
+}
+
+.main-nav a:hover::after {
+    width: 100%; 
+}
+
+/* Renamed: active-link (Retained name) */
+.active-link {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+.active-link::after {
+    width: 100% !important; /* Ensure active link is fully underlined */
+}
+
+/* --- 4. FORM & INPUT COMPONENTS --- */
+
+/* Form Input */
+.form-input {
+    width: 100%;
+    padding: 0.8rem; 
+    border: 1px solid var(--color-border-light);
+    border-radius: 0.75rem; 
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(4, 170, 109, 0.25); 
+    background-color: var(--color-secondary-bg); 
+}
+
+/* Form Card (Retained name) - SOFTENED LOOK */
+.form-card {
+    background-color: #ffffff;
+    padding: 3rem; 
+    border-radius: 2rem; 
+    box-shadow: var(--shadow-lg); 
+    border-top: 8px solid var(--color-primary); 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Large Form Input (Retained name) */
+.large-form-input {
+    padding: 1.1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 1rem; 
+    width: 100%;
+    font-size: 1.05rem;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.large-form-input:focus {
+    outline: none;
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 5px rgba(4, 170, 109, 0.35); 
+}
+
+/* Contact Form Card (Retained name) - SLIGHT GLASS EFFECT FOR DIFFERENTIATION */
+.contact-form-card {
+    background-color: var(--glass-background); 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 3.5rem; 
+    border-radius: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(229, 231, 235, 0.7); 
+}
+
+/* --- 5. CARD & GRID COMPONENTS (Programs, Blog, Events) --- */
+
+/* Program Card - 3D LIFT EFFECT with subtle glow */
+.program-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem; 
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--color-border-light); 
+    position: relative;
+    z-index: 1;
+}
+
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1.25rem;
+    padding: 2px; 
+    background: linear-gradient(135deg, var(--color-primary), transparent);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.program-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 25px 45px rgba(4, 170, 109, 0.25); 
+    border-color: var(--color-primary); 
+}
+
+.program-card:hover::before {
+    opacity: 1; 
+}
+
+.program-card img {
+    border-bottom: 4px solid var(--color-primary);
+    transition: transform 0.5s ease-in-out, opacity 0.5s;
+    object-fit: cover;
+    width: 100%;
+    height: 200px; 
+}
+
+.program-card:hover img {
+    opacity: 1;
+    transform: scale(1.02); 
+}
+
+/* Program Icon - RING EFFECT */
+.program-icon {
+    color: var(--color-primary);
+    margin-right: 1rem;
+    height: 2.5rem; 
+    width: 2.5rem;
+    background-color: var(--color-secondary-bg);
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 0 0 3px var(--color-primary), inset 0 0 0 2px var(--color-secondary-bg); 
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--light-color);
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5); /* Overlay */
 }
 
-.hero h1, .hero h2 {
-    color: var(--light-color); /* Override primary-color for hero text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+/* --- 6. MAP & OTHER SPECIFIC ELEMENTS --- */
 
-/* Programs & About Sections */
-.about-home {
-    background-color: var(--medium-gray);
-}
-
-.three-column-grid,
-.program-grid,
-.testimonial-grid,
-.event-list,
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.grid-item,
-.testimonial-card,
-.program-card,
-.event-item,
-.blog-post-card {
-    background-color: var(--medium-gray);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Center content in grid items for visual consistency */
-}
-
-.grid-item:hover,
-.program-card:hover,
-.blog-post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* About Page Specific Styling */
-.page-intro {
-    font-size: 1.125rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-}
-
-.about-content {
-    /* Changed to a standard column layout for text flow,
-       the image/text grid is better handled by media queries below */
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.about-content > img { /* Style for the main image in about-content */
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin: 0 auto; /* Center the image */
-}
-
-/* Team Grid (Specific alignment for team member cards) */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    text-align: center;
-}
-.team-member {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    background-color: var(--light-color);
-}
-.team-member img {
+/* Map Container */
+.map-container {
+    position: relative;
     width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%; /* Circular images */
-    margin: 0 auto 0.5rem;
-}
-.team-member .role {
-    display: block;
-    color: var(--primary-color);
-    font-size: 0.9rem;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-radius: 1.5rem; 
+    border: 6px solid var(--color-primary); 
+    box-shadow: var(--shadow-lg);
 }
 
-/* Volunteer Page Specific Styling */
-.volunteer-content {
-    display: grid;
-    gap: 2rem;
-    /* Default to single column for smaller viewports/consistency */
-    grid-template-columns: 1fr;
-    margin-top: 2rem;
-}
-
-.volunteer-form, .contact-form, .donation-form {
-    background-color: var(--medium-gray);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 550px; /* Limit form width for better readability */
-    margin: 0 auto;
+    height: 100%;
+    filter: grayscale(10%); 
+    transition: filter 0.5s;
 }
 
-/* Donate Page Specific Styling */
-.donate-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.map-container:hover iframe {
+    filter: grayscale(0%); 
 }
 
-.donation-options-grid {
-    max-width: 1000px;
+/* --- 7. ANIMATIONS & SCREEN FLOW --- */
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.donation-card {
-    padding: 2rem;
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Contact Page Specific Styling */
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr; /* Default to single column */
-    gap: 2rem;
-    margin-top: 2rem;
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.contact-info {
-    /* Align text content left within the centered block */
-    text-align: left;
-    max-width: 550px;
-    margin: 0 auto;
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* =========================================
-   4. RESPONSIVE DESIGN
-   ========================================= */
+/* Global On-Load Flow Classes (Requires JS/Intersection Observer) */
+.animate-on-load {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.5, 0.1, 1);
+}
 
-@media (min-width: 769px) {
-    /* Tablet & Larger */
+.flow-in-delay-1 { animation-delay: 0.1s; }
+.flow-in-delay-2 { animation-delay: 0.2s; }
+.flow-in-delay-3 { animation-delay: 0.3s; }
 
-    /* Contact Grid */
-    .contact-content {
-        grid-template-columns: 1fr 1fr;
-        max-width: 1000px;
-        margin: 2rem auto;
+.flow-slide-up { animation-name: slideUp; animation-duration: 0.8s; }
+.flow-fade-in { animation-name: fadeIn; animation-duration: 1s; }
+.flow-scale-in { animation-name: scaleIn; animation-duration: 0.7s; }
+
+/* Full Page Loading Overlay (Simulates page transitions) */
+#page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; 
+    z-index: 9999;
+    pointer-events: none; 
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Class added by JS right before navigating */
+.is-exiting #page-transition-overlay {
+    opacity: 1;
+}
+
+/* Button/Form Action Spinner */
+.button-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin-left: 0.5rem;
+}
+
+.primary-button.is-loading .button-text {
+    visibility: hidden;
+}
+
+.primary-button.is-loading .button-spinner {
+    display: inline-block;
+}
+
+/* Simple Block Loader */
+.data-section-loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--color-secondary-bg);
+    border-top: 4px solid var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
+    margin: 2rem auto;
+}
+
+/* --- 8. RESPONSIVENESS & UTILITIES --- */
+
+@media (min-width: 768px) {
+    .right-side-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem; 
     }
-
-    /* Volunteer Grid */
-    .volunteer-content {
-        grid-template-columns: 1.5fr 1fr; /* Text wider than form */
+    .button-logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .main-nav { 
+        display: flex;
         align-items: center;
     }
-    /* Center the form within its grid cell */
-    .volunteer-form {
-        margin: 0;
-    }
-
-    /* About Content Grid (Text beside image) */
-    .about-content-grid { /* New class added to HTML for this */
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 3rem;
-        align-items: center;
-    }
 }
 
-@media (max-width: 768px) {
-    /* Mobile & Smaller */
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav {
-        margin-top: 1rem;
-    }
-    nav ul {
-        /* Keep nav horizontal on tablet, wrap if needed */
-        flex-wrap: wrap; 
-        justify-content: center;
-    }
-    .hero {
-        height: 60vh;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Smaller Mobile */
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    .btn {
-        width: 100%;
-    }
+/* Error and Hidden Content */
+.hidden {
+    display: none;
 }
